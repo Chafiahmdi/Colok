@@ -48,9 +48,9 @@ if (isset($_SESSION['id'])) {
 <h1 class="page-title">Mon profil</h1>
     <div class="profile-picture">  
     <a href="#imageFile" onclick="poutpout()" class="profile-link">
-    <?php  if(isset($user['photo_profil'])){ ?>  <img  src="../images/profile(1).svg?php echo $user['photo_profil'] ?> " id="blah" alt="">     <i id="mon-icon" class="fas fa-camera"></i> <?php }
+    <?php  if(isset($user['photo_profil'])){ ?>  <img  src="../assets/images/profile(1).svg?php echo $user['photo_profil'] ?> " id="blah" alt="">     <i id="mon-icon" class="fas fa-camera"></i> <?php }
         else{?>
-            <img src="../images/profile(1).svg" id="blah" alt="">
+            <img src="../assets/images/profile(1).svg" id="blah" alt="">
        <?php  } ?>
    
 
@@ -127,12 +127,12 @@ if (isset($_SESSION['id'])) {
         if($user['photo_profil'] == ""){ ?>
 
 
-          <img src="../images/profile-user-svgrepo-com. (1).svg" alt="profile-sample4" class="profile" />
+          <img src="../assets/images/profile-user-svgrepo-com. (1).svg" alt="profile-sample4" class="profile" />
       <?php 
         }
       else
       ?>
-    <img src="../images/<?php echo $user['photo_profil'] ?>" alt="" class="profile" />
+    <img src="../assets/images/<?php echo $user['photo_profil'] ?>" alt="" class="profile" />
     <h2><?php echo $user['prenom'] ?> <?php echo $user['nom'] ?></h2>
   
     <div>

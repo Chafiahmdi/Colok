@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if($_FILES['fileToUpload']['name'] != ""){
                 $photo_profil = $_FILES['fileToUpload']['name'];
                 if($photo_profil != ""){
-                    $target_dir = "../images/";
+                    $target_dir = "../assets/images/";
                     $target_file = $target_dir . basename($_FILES['fileToUpload']['name']);
                     $uploadOk = 1;
                     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));

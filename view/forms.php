@@ -183,7 +183,7 @@
               <?php if ($userMaison['photo_profil'] == "") { ?>
                 <img style="width: 10vw;height: 10vw; border-radius: 50%;margin:auto;object-fit: cover;" src="../assets/images/profile-user-svgrepo-com (1).svg" alt="Photo de profil par défaut" />
               <?php } else { ?>
-                <img style="width: 10vw;height: 10vw; border-radius: 50%;margin: auto;object-fit: cover" src="../images/<?php echo $userMaison['photo_profil']; ?>" alt="Photo de profil de l'utilisateur" />
+                <img style="width: 10vw;height: 10vw; border-radius: 50%;margin: auto;object-fit: cover" src="../assets/images/<?php echo $userMaison['photo_profil']; ?>" alt="Photo de profil de l'utilisateur" />
               <?php } ?>
               <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2"><?php echo $userMaison['nom']; ?></div>

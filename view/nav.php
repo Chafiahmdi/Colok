@@ -49,9 +49,9 @@ $count = count($notif);
         <div @click.away="open = false" class="relative" x-data="{ open: false }">
             <button @click="open = !open" class="flex flex-row items-center w-18 px-2 pb-2 pt-0 mt-0 text-sm font-semibold mr-[35px] ml-[35px] text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4">
                 <?php if($user['photo_profil'] == "") { ?>
-                    <img src="../images/profile-user-svgrepo-com. (1).svg" alt="Image de profil par défaut" class="w-[62px] mt-2  rounded-full h-[4rem] max-w-full mx-auto">
+                    <img src="../assets/images/profile-user-svgrepo-com. (1).svg" alt="Image de profil par défaut" class="w-[62px] mt-2  rounded-full h-[4rem] max-w-full mx-auto">
                 <?php } else { ?>
-                    <img src="../images/<?php echo $user['photo_profil']; ?>" alt="Image de profil" class="w-[62px] mt-2  rounded-full h-[4rem] max-w-full mx-auto">
+                    <img src="../assets/images/<?php echo $user['photo_profil']; ?>" alt="Image de profil" class="w-[62px] mt-2  rounded-full h-[4rem] max-w-full mx-auto">
                 <?php } ?>
                         </button>
 

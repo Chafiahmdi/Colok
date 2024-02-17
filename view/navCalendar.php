@@ -93,7 +93,7 @@ $count = count($notif);
       if ($user['photo_profil'] == "") { ?>
         <img src="../assets/images/profile-user-svgrepo-com (1).svg" style=" height: 58px;  ">
       <?php } else { ?>
-        <img src="../images/<?php echo $user['photo_profil']; ?>" alt="Image de profil">
+        <img src="../assets/images/<?php echo $user['photo_profil']; ?>" alt="Image de profil">
       <?php } ?>
     </div>
     <div class="icon" onclick="toggleNotifi()">
