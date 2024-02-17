@@ -1,0 +1,185 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+nav {
+  background: white;
+  height: 50rem;
+  width: 100%;
+  filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06));
+  margin: 0 auto; /* Ajout pour centrer horizontalement */
+}
+
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 5px;
+}
+
+nav ul li {
+  display: block;
+  margin: 0 4px;
+}
+
+nav ul li a {
+  color: black;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-decoration: none;
+  margin-left: 0.8rem;
+}
+nav ul li a i {
+  margin-right: 0.5rem;
+}
+
+.btn-add a:hover {
+  color: #000000; /* Couleur du texte au survol  */
+}
+
+.btn-add a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Épaisseur de la ligne de soulignement */
+  bottom: -2px; /* Décalez légèrement la ligne vers le bas pour cacher le texte */
+  left: 0;
+  background-color: transparent; /* Couleur de l'animation du soulignement (transparent au début) */
+  transition: width 0.3s ease, background-color 0.3s ease; /* Durée de l'animation */
+}
+
+.btn-add a:hover::before {
+  width: 100%; /* Largeur de l'animation du soulignement au survol */
+  background-color: #8ECAE6; /* Couleur de l'animation du soulignement (violet) */
+}
+
+a:hover {
+  width: 100%;
+  color: #8cb369; /* Couleur du texte au survol  */
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Épaisseur de la ligne de soulignement */
+  bottom: -2px; /* Décalez légèrement la ligne vers le bas pour cacher le texte */
+  left: 0;
+  background-color: transparent; /* Couleur de l'animation du soulignement (transparent au début) */
+  transition: width 0.3s ease, background-color 0.3s ease; /* Durée de l'animation */
+}
+
+a:hover::before {
+  width: 100%; /* Largeur de l'animation du soulignement au survol */
+  background-color: #8CB369; /* Couleur de l'animation du soulignement (violet) */
+}
+
+@keyframes pulseOnce {
+  0% {
+    transform: scale(1.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Styles pour l'effet de soulignement */
+a {
+  position: relative;
+  text-decoration: none;
+  color: #333333; /* Couleur du texte */
+  transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Transition de couleur du texte et de la bordure */
+}
+
+.nav-items {
+  width: 8rem;
+  height: 7rem;
+  margin-bottom: 9px;
+  padding: 35px 0;
+}
+
+.nav-img img {
+  width: 4.1rem;
+  height: 4.1rem;
+  border-radius: 50%;
+  margin-right: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  .label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  nav {
+    justify-content: center;
+  }
+  .nav-img {
+    display: none;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: 100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+/*# sourceMappingURL=navCalendar.css.map */

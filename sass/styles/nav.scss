@@ -1,0 +1,44 @@
+
+
+
+.nav-link:hover {
+    color: #8CB369; /* Couleur du texte au survol  */
+  }
+  
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px; /* Épaisseur de la ligne de soulignement */
+    bottom: -2px; /* Décalez légèrement la ligne vers le bas pour cacher le texte */
+    left: 0;
+    background-color: transparent; /* Couleur de l'animation du soulignement (transparent au début) */
+    transition: width 0.3s ease, background-color 0.3s ease; /* Durée de l'animation */
+  }
+  
+  .nav-link:hover::before {
+    width: 100%; /* Largeur de l'animation du soulignement au survol */
+    background-color:  #8CB369; /* Couleur de l'animation du soulignement (violet) */
+  }
+  // styles.scss
+  
+// Définissez l'animation de pulsation avec @keyframes
+@keyframes pulseOnce {
+    0% {
+      transform: scale(1.8);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  /* Styles pour l'effet de soulignement */
+  .nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #333333; /* Couleur du texte */
+    transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Transition de couleur du texte et de la bordure */
+  }
+  

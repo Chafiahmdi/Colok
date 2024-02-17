@@ -1,0 +1,75 @@
+@import "variables";
+
+
+.un {
+	min-height: 66vh;
+	display: flex;
+    flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+
+    .cd {
+        height: 350px;
+        width: 290px;
+        box-shadow: rgb(214, 212, 212) -20px 17px 21px;
+        transform: perspective(400px) rotateX(49deg) rotateZ(-29deg);
+        transition: transform 1s;
+        background-color: white;
+        border-radius: 1rem;
+        margin-left: 7rem;
+        margin-right: 7rem;
+        border: 0.1rem solid $light-blue;
+        
+        &:hover {
+            transform: rotateY(19deg);
+        }
+
+        .illust-card{
+            height:40%;
+            width: 100%;
+            background-color: white;
+
+            // background-image: url("../assets/images/ampoule.png");
+            img{
+                margin-left: auto;
+                margin-right: auto;
+                background-color: white;
+
+                margin-top: 1rem;
+            }
+        }
+        &-h2{
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            background-color: white;
+
+            padding: 2rem;
+
+        }
+        &-p {   
+            font-size: 1rem;
+            margin-top: 3rem;
+            transition: 0.5s ease-in-out;
+            background-color: white;
+
+            padding: 2rem;
+
+                // &:hover {
+                // background: #fff;
+                // }
+            } 
+    }
+}
+
+    @media (max-width: 768px) {
+        .un {
+          display: flex;
+          flex-direction: column;
+            .cd{
+                margin-bottom: 9rem;
+            }
+        }
+        }
+

@@ -1,0 +1,323 @@
+@import "variables";
+
+// $color_1: #aaa;
+$color_3: #fff;
+$background-color_1: #fff;
+$background-color_3: #ccc;
+$background-color_4: #eee;
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.taille-carrousel{
+    width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.promotions {
+	border-radius: 5px;
+	padding: 0 15px;
+	position: relative;
+	margin: 50px 50px;
+}
+.slider-label {
+	position: absolute;
+	right: 20px;
+	top: 8px;
+	font-size: 14px;
+	font-weight: 600;
+}
+.PromotionsList {
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	height: 330px;
+	box-sizing: border-box;
+	overflow: hidden;
+	z-index: 3;
+	&:before {
+		content: '';
+		position: absolute;
+		width: 45rem;
+		height: 8rem;
+		z-index: 3;
+        background-image: url(../../assets/images/guillemets.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+	}
+	li {
+		display: flex;
+		align-items: center;
+		position: relative;
+		position: absolute;
+		top: 40px;
+		width: 100%;
+		z-index: 1;
+		.app-icon {
+			border-radius: 100%;
+			background-color: $light-blue;
+			position: relative;
+			top: 260px;
+			height: 250px;
+			width: 250px;
+			align-items: center;
+			text-align: center;
+			line-height: 85px;
+			transition: all .3s ease-out;
+			box-sizing: border-box;
+			padding: 1.5rem;
+			opacity: 0;
+			img {
+				vertical-align: middle;
+				height: 100%;
+                border-radius: 100%;
+			}
+		}
+		.app-short-desc {
+			margin-left: -6rem;
+			opacity: 0;
+			transition: all .3s ease-out;
+            background-color: $color_3;
+            padding-left: 8rem;
+            padding-right: 8rem;
+            border-radius: 2rem;
+            height: 12rem;
+            width: 48rem;
+
+			span.app-title {
+				display: block;
+				margin: 8px 0;
+				font-size: 18px;
+				font-weight: 600;
+	
+			}
+			span.app-desc {
+				display: block;
+				margin: 8px 0;
+				font-size: 16px;
+				font-weight: 400;
+				max-width: 700px;
+			}
+		}
+	}
+	li.active {
+		z-index: 2;
+		.app-icon {
+			top: 0;
+			opacity: 1;
+			z-index: 3;
+		}
+		.app-short-desc {
+			opacity: 1.0;
+		}
+	}
+	li.transform {
+		.app-icon {
+			transform: translateY(-100px);
+			top: 0;
+			opacity: 0;
+		}
+	}
+}
+.controls {
+	position: absolute;
+	right: 30px;
+	text-align: right;
+	bottom: 9rem;
+	z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 5rem;
+	span.dot {
+
+	
+		border-radius: 50%;
+		display: inline-block;
+		width: 1rem;
+		height: 1rem;
+		background-color: white;
+        border: 1px solid $blue;
+		border-radius: 50%;
+		display: inline-block;
+		cursor: pointer;
+	}
+	span.dot.active {
+		background-color: $blue;
+	}
+}
+
+// :::::::::::::::::::::::::::::::::::::::RESPONSIF::::::::::::::::::::::::::::::::::::::::::::
+@media (max-width: 768px) {
+
+#ProductPromotions{
+    height: 0;
+}
+.taille-carrousel{
+    width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.promotions {
+	border-radius: 5px;
+	padding: 0 15px;
+	position: relative;
+	margin: 50px 50px;
+    height: 75vh;
+}
+.slider-label {
+	position: absolute;
+	right: 20px;
+	top: 8px;
+	// color: $color_1;
+	font-size: 14px;
+	font-weight: 600;
+}
+.PromotionsList {
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	height: 37rem;
+	box-sizing: border-box;
+	overflow: revert;
+	z-index: 3;
+	&:before {
+		content: '';
+		position: absolute;
+		width: 12rem;
+		height: 8rem;
+		z-index: 3;
+        top: 8rem;
+        right: -2rem;
+        background-image: url(../../assets/images/guillemets.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+	}
+
+	li {
+		display: flex;
+        flex-direction: column;
+		align-items: center;
+		position: relative;
+		position: absolute;
+		top: 40px;
+		width: 100%;
+		z-index: 1;
+		.app-icon {
+			border-radius: 100%;
+			position: relative;
+			top: 260px;
+			height: 250px;
+			width: 250px;
+			align-items: center;
+			text-align: center;
+			line-height: 85px;
+			transition: all .3s ease-out;
+			box-sizing: border-box;
+			padding: 1.5rem;
+			opacity: 0;
+			img {
+				vertical-align: middle;
+				height: 100%;
+                border-radius: 100%;
+			}
+		}
+		.app-short-desc {
+		
+			background-color: #fff !important;
+			opacity: 0;
+			transition: all .3s ease-out;
+            // background-color: $light-blue;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            padding-top: 7rem;
+            border-radius: 2rem;
+            height: 24rem;
+            width: 32rem;	
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -6rem;
+            
+
+			span.app-title {
+				display: block;
+				margin: 8px 0;
+				font-size: 18px;
+				font-weight: 600;
+
+			}
+			span.app-desc {
+				display: block;
+				margin: 8px 0;
+				font-size: 16px;
+				font-weight: 400;
+				max-width: 700px;
+				
+			}
+			.learn-button {
+				display: block;
+				button {
+					padding: 10px 25px;
+					border-radius: 5px;
+					background: #fff;
+					font-size: 16px;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	li.active {
+		z-index: 2;
+		.app-icon {
+			top: 0;
+			opacity: 1;
+			z-index: 3;
+		}
+		.app-short-desc {
+			opacity: 1.0;
+		}
+	}
+	li.transform {
+		.app-icon {
+			transform: translateY(-100px);
+			top: 0;
+			opacity: 0;
+		}
+	}
+}
+.controls {
+	position: absolute;
+	right: 15rem;
+	text-align: right;
+	bottom: -12%;
+	z-index: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 5rem;
+	span.dot {
+
+	
+		border-radius: 50%;
+		display: inline-block;
+		width: 1rem;
+		height: 1rem;
+		background-color: white;
+        border: 1px solid $blue;
+		border-radius: 50%;
+		display: inline-block;
+		cursor: pointer;
+	}
+	span.dot.active {
+		background-color: $blue;
+	}
+}
+
+}

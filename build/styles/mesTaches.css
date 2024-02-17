@@ -1,0 +1,258 @@
+@charset "UTF-8";
+body {
+  font-family: "Lato", sans-serif;
+}
+body * {
+  box-sizing: border-box;
+}
+body .container-titre {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 20;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+body .container-titre h2 {
+  font-size: 2.25rem;
+}
+body .container-titre .trait {
+  width: 12rem;
+  border-radius: 9999px;
+  background-color: #8ECAE6;
+  height: 1.25rem;
+  position: absolute;
+  z-index: -20;
+  margin-top: 2rem;
+}
+
+.table-users {
+  border-radius: 1rem;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+  max-width: calc(100% - 2em);
+  margin: 1em auto;
+  overflow: hidden;
+  width: 65rem;
+  margin-bottom: 35vh;
+}
+
+table {
+  width: 100%;
+}
+table td, table th {
+  color: #1a375d;
+  padding: 1rem;
+  height: 5rem;
+}
+table td {
+  text-align: center;
+  vertical-align: middle;
+  border-top: 1px solid #96cae7;
+}
+table td:last-child {
+  font-size: 0.95em;
+  line-height: 1.4;
+  text-align: left;
+}
+table th {
+  background-color: #8ECAE6;
+  text-transform: uppercase;
+}
+table tr:nth-child(2n) {
+  background-color: white;
+}
+table tr:nth-child(2n+1) {
+  background-color: white;
+}
+
+.btn-group {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.btn-group .btn {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* Demo Styles */
+body {
+  color: #1a375d;
+}
+
+.container-modal {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 1rem;
+}
+
+.modal-window > div {
+  border-radius: 1rem;
+}
+
+.modal-window div:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.logo {
+  max-width: 150px;
+  display: block;
+}
+
+.btn {
+  background-color: #E1F6FD;
+  color: #8ECAE6;
+  font-weight: bold;
+  padding: 0.5rem 0.4rem;
+  border-radius: 1rem;
+  border: none;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+.btn i {
+  padding-right: 0.3em;
+}
+
+@media screen and (max-width: 700px) {
+  table, tr, td {
+    display: flex;
+    flex-direction: column;
+  }
+  thead {
+    display: none;
+  }
+  td:first-child {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+  }
+  td:not(:first-child) {
+    clear: both;
+    margin-left: 100px;
+    padding: 4px 20px 4px 90px;
+    position: relative;
+    text-align: left;
+  }
+  td:not(:first-child):before {
+    color: #1a375d;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+  }
+  td:nth-child(2):before {
+    content: "Date de la tâche:";
+  }
+  td:nth-child(3):before {
+    content: "Description:";
+  }
+  td:nth-child(4):before {
+    content: "Statut:";
+  }
+  td:nth-child(5):before {
+    content: "Actions:";
+  }
+  tr {
+    padding: 10px 0;
+    position: relative;
+    height: 28rem;
+  }
+  th {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  td:first-child {
+    border-radius: 1rem 1rem 0 0;
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  td:not(:first-child) {
+    margin: 0;
+    padding: 5px 3em;
+    width: 100%;
+  }
+  td:not(:first-child):before {
+    font-size: 1em;
+    font-weight: bold;
+    padding-top: 0.3em;
+    padding-bottom: 0.5em;
+    position: relative;
+  }
+  td:last-child {
+    padding-bottom: 1rem !important;
+  }
+  tr {
+    background-color: white !important;
+    border: 1px solid #8ECAE6;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    margin: 0.5rem 1rem 4.5rem 1rem;
+    padding: 0;
+  }
+  .table-users {
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+  }
+}
+.modal-window {
+  position: fixed;
+  background-color: rgba(26, 55, 93, 0.599);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-window > div {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background: white;
+}
+.modal-window header {
+  font-weight: bold;
+}
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+}
+
+.modal-close {
+  color: #1a375d;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+.modal-close:hover {
+  color: black;
+}
+
+/*# sourceMappingURL=mesTaches.css.map */

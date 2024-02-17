@@ -1,0 +1,88 @@
+$color_1: white;
+$font-family_1: Lato, sans-serif;
+
+
+footer {
+	background: url('../../assets/images/svg-animation-waves.svg');
+	background-size: cover;
+	padding-top: 8rem;
+	//height: 100%;
+	background-position: center top -17rem;	
+    font-family: $font-family_1;
+
+	.content-footer {
+		max-width: 100%;
+		margin: 0rem auto 0rem auto;
+		padding: 2rem 1rem;
+		background-color: #1a375d;
+	}
+
+	.footer-content {
+		text-align: center;
+		color: $color_1;
+	}
+	.titre-footer {
+		font-size: 2rem;
+		margin-bottom: 20px;
+	}
+
+	.app-download {
+		display: flex;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+	.download-button {
+		display: flex;
+		align-items: center;
+		border: 1px solid white;
+		border-radius: 1rem;
+		padding: 0.5rem 1rem;
+		margin: 0 10px;
+		img {
+			width: 40px;
+			margin-right: 10px;
+		}
+		p {
+			font-size: 1rem;
+		}
+	}
+	.copyright {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 0.5rem;
+		color: $color_1;
+		font-size: 0.8rem;
+		padding-bottom: 2rem;
+		a {
+			text-decoration: none;
+			color: $color_1;
+			margin: 0 5px;
+		}
+	}
+
+}
+
+// mobile
+
+@media (max-width: 768px) {
+    footer {
+        background-position: center top 0rem;	
+		height: 28% !important;
+		.content-footer {
+			padding: 0rem 1rem;
+			margin: -2rem auto 0rem auto;
+			.titre-footer {
+				margin: 2rem;
+			} 
+			p{
+				font-size: 1.2rem;
+			}
+		}
+		.footer-content {
+			margin-top: 7rem;
+		}
+    }
+}
+
+

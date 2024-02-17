@@ -1,0 +1,234 @@
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+    
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.anim-right{
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+
+@keyframes anim {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.anim-left{
+    animation: anim 2s ease 0s 1 normal forwards;
+}
+
+
+
+
+
+//animation des nuages
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Satisfy');
+
+body {
+
+  font-family: 'lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+article {
+  width: 70%;
+  margin: 40px auto 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+
+
+figure {
+  width: 100%;
+  margin: 0;
+  padding: 350px 0 0 0;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  overflow: hidden;
+  background: url(http://res.cloudinary.com/duqzvuawc/image/upload/c_scale,h_424/v1508813537/clouds_tile_efhbuh.jpg);
+  animation: clouds_animation 75s linear infinite;
+  
+}
+
+@keyframes clouds_animation {
+  
+  0%  {background-position: 0 0;}
+  100%  {background-position: -2122px 0;}
+}
+
+
+  
+// Animation birds
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.test {
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// min-height: 100vh;
+	min-height: 35rem;
+    max-width: 100%;
+	// background-blend-mode: soft-light;
+	background-size: cover;
+	background-position: center center;
+	padding: 2rem;
+}
+
+
+.bird {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+	background-size: auto 100%;
+	width: 88px;
+	height: 125px;
+	will-change: background-position;
+	
+	animation-name: fly-cycle;
+	animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+
+	&--one {
+		animation-duration: 1s;
+		animation-delay: -0.5s;		
+	}
+	
+	&--two {
+		animation-duration: 0.9s;
+		animation-delay: -0.75s;
+	}
+	
+	&--three {
+		animation-duration: 1.25s;
+		animation-delay: -0.25s;
+	}
+	
+	&--four {
+		animation-duration: 1.1s;
+		animation-delay: -0.5s;
+	}
+
+}
+
+.bird-container {
+	position: absolute;
+	top: 20%;
+	left: -10%;
+	transform: scale(0) translateX(-10vw);
+	will-change: transform;
+	
+	animation-name: fly-right-one;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	
+	&--one {
+		animation-duration: 15s;
+		animation-delay: 0;
+	}
+	&--two {
+		animation-duration: 16s;
+		animation-delay: 1s;
+	}
+	&--three {
+		animation-duration: 14.6s;
+		animation-delay: 9.5s;
+	}	
+	&--four {
+		animation-duration: 16s;
+		animation-delay: 10.25s;
+	}	
+}
+
+@keyframes fly-cycle {
+	100% {
+		background-position: -900px 0;
+	}	
+}
+
+@keyframes fly-right-one {
+	
+	0% {
+		transform: scale(0.3) translateX(-10vw);
+	}
+	10% {
+		transform: translateY(2vh) translateX(10vw) scale(0.4);
+	}
+	20% {
+		transform: translateY(0vh) translateX(30vw) scale(0.5);
+	}	
+	30% {
+		transform: translateY(4vh) translateX(50vw) scale(0.6);
+	}	
+	40% {
+		transform: translateY(2vh) translateX(70vw) scale(0.6);
+	}	
+	50% {
+		transform: translateY(0vh) translateX(90vw) scale(0.6);
+	}	
+	60% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}	
+	100% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	
+}
+
+@keyframes fly-right-two {
+	
+	0% {
+		transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+	}	
+	10% {
+		transform: translateY(0vh) translateX(10vw) scale(0.4);
+	}	
+	20% {
+		transform: translateY(-4vh) translateX(30vw) scale(0.6);
+	}	
+	30% {
+		transform: translateY(1vh) translateX(50vw) scale(0.45);
+	}	
+	40% {
+		transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+	}	
+	50% {
+		transform: translateY(0vh) translateX(90vw) scale(0.45);
+	}	
+	51% {
+		transform: translateY(0vh) translateX(110vw) scale(0.45);
+	}	
+	100% {
+		transform: translateY(0vh) translateX(110vw) scale(0.45);
+	}
+	
+}
+
